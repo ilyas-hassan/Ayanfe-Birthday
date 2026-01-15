@@ -1,1 +1,1 @@
-This is the repo for my one and only's birthday message 
+This is the repo for trying out Github Pages
