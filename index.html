@@ -1,267 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Happy Birthday, Ayanfe ❤️</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Ayanfe birthday archive: one love letter, one memory box, one chapter at a time.">
+<title>The Ayanfe Archive</title>
 <style>
   :root {
-    --bg:#0b1021;
-    --panel:#0e1631;
-    --ink:#f8fafc;
-    --muted:#cbd5e1;
-    --gold:#fbbf24;
-    --rose:#fb7185;
-    --teal:#34d399;
+    --ink: #f8f1e7;
+    --muted: #b9b1a8;
+    --dim: #817d7b;
+    --night: #101219;
+    --night-2: #171a25;
+    --rose: #e87879;
+    --rose-deep: #9d4c5e;
+    --gold: #e8bd73;
+    --mint: #9ed6c0;
+    --line: rgba(248, 241, 231, .15);
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    margin:0;
-    min-height:100vh;
-    color:var(--ink);
-    background: radial-gradient(1400px 900px at 70% -20%, #1f2a44 0%, var(--bg) 60%) fixed;
-    font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
-    overflow-x:hidden;
+    min-width: 320px;
+    margin: 0;
+    color: var(--ink);
+    background:
+      radial-gradient(1100px 700px at 86% -5%, rgba(232, 120, 121, .18), transparent 68%),
+      radial-gradient(800px 700px at 0% 42%, rgba(158, 214, 192, .08), transparent 65%),
+      var(--night);
+    font-family: var(--sans);
+    overflow-x: hidden;
   }
-  .sky { position:fixed; inset:0; z-index:-1; pointer-events:none; overflow:hidden; }
-  .petal {
-    position:absolute; left:50%; top:-10vh;
-    width:14px; height:10px; border-radius:10px 10px 10px 10px/14px 14px 6px 6px;
-    background: linear-gradient(180deg, #ffd6e0, #ff8fab);
-    opacity:.25; transform: translateX(-50%);
-    animation: fall var(--dur) linear infinite;
-    filter: blur(0.2px);
+  body::before { content: ""; position: fixed; inset: 0; z-index: 20; pointer-events: none; opacity: .07; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E"); }
+  a { color: inherit; }
+  .page { width: min(1220px, calc(100% - 64px)); margin: 0 auto; }
+  .site-nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 28px 0; border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
+  .brand { color: var(--gold); text-decoration: none; font-weight: 800; }
+  .nav-note { color: var(--muted); }
+  .nav-note em { color: var(--rose); font-family: var(--serif); font-size: 17px; letter-spacing: 0; text-transform: none; }
+  .hero { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .8fr); gap: clamp(42px, 8vw, 132px); align-items: center; min-height: min(830px, calc(100vh - 82px)); padding: clamp(75px, 11vw, 150px) 0 125px; }
+  .hero-copy { position: relative; z-index: 1; }
+  .eyebrow { display: flex; align-items: center; gap: 13px; color: var(--gold); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; }
+  .eyebrow::before { content: ""; width: 42px; height: 1px; background: currentColor; }
+  h1, h2, h3, .display-number, .chapter-number { font-family: var(--serif); font-weight: 400; }
+  h1 { max-width: 750px; margin: 25px 0 29px; font-size: clamp(59px, 8.7vw, 120px); line-height: .87; letter-spacing: -.075em; }
+  h1 .line { display: block; }
+  h1 em { color: var(--rose); font-style: italic; }
+  .hero-lede { max-width: 520px; margin: 0; color: var(--muted); font-size: clamp(17px, 2vw, 21px); line-height: 1.7; }
+  .hero-lede strong { color: var(--ink); font-weight: 500; }
+  .open-link { display: inline-flex; align-items: center; gap: 16px; margin-top: 38px; color: var(--ink); text-decoration: none; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; font-weight: 800; }
+  .open-link::after { content: "↓"; display: grid; place-items: center; width: 31px; height: 31px; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold); font-size: 17px; transition: transform .25s ease, background .25s ease; }
+  .open-link:hover::after { transform: translateY(4px); background: rgba(232, 189, 115, .12); }
+  .hero-art { position: relative; justify-self: end; width: min(100%, 470px); }
+  .hero-art::before { content: ""; position: absolute; inset: 30px 0 -30px 30px; border: 1px solid rgba(232, 120, 121, .6); transform: rotate(-4deg); }
+  .hero-art::after { content: "02 / ∞"; position: absolute; top: 18px; right: 0; color: var(--gold); font-size: 10px; letter-spacing: .18em; writing-mode: vertical-rl; }
+  .memory-photo { position: relative; padding: 12px 12px 70px; background: #eee2d3; color: var(--night); box-shadow: 0 36px 80px rgba(0, 0, 0, .42); transform: rotate(3deg); transition: transform .5s cubic-bezier(.2, .8, .2, 1); }
+  .memory-photo:hover { transform: rotate(0deg) translateY(-8px); }
+  .memory-photo img { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; filter: saturate(.95) contrast(1.04); }
+  .memory-photo figcaption { margin: 16px 10px 0; font-family: var(--serif); font-size: 22px; }
+  .photo-meta { position: absolute; right: 23px; bottom: 22px; color: #746b61; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; }
+  .tape { position: absolute; top: -19px; left: 50%; width: 132px; height: 39px; background: rgba(232, 189, 115, .78); transform: translateX(-50%) rotate(-5deg); z-index: 1; }
+  .scroll-cue { position: absolute; right: 0; bottom: 39px; display: flex; align-items: center; gap: 13px; color: var(--dim); font-size: 10px; letter-spacing: .17em; text-transform: uppercase; writing-mode: vertical-rl; }
+  .scroll-cue::after { content: ""; width: 1px; height: 58px; background: var(--dim); }
+  .manifesto { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(40px, 10vw, 160px); padding: 86px 0 98px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .manifesto-label { color: var(--rose); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; }
+  .manifesto h2 { max-width: 650px; margin: 0; font-size: clamp(36px, 5.5vw, 72px); line-height: .98; letter-spacing: -.06em; }
+  .manifesto h2 em { color: var(--gold); font-style: italic; }
+  .manifesto p { max-width: 540px; margin: 24px 0 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
+  .archive { padding: 122px 0 128px; }
+  .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 57px; }
+  .section-heading h2 { margin: 15px 0 0; font-size: clamp(45px, 7vw, 86px); line-height: .9; letter-spacing: -.07em; }
+  .section-heading p { max-width: 280px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+  .archive-map { position: relative; }
+  .archive-map::before { content: ""; position: absolute; top: 20px; bottom: 26px; left: 74px; width: 1px; background: linear-gradient(var(--gold), var(--rose), rgba(248, 241, 231, .2)); }
+  .chapter { position: relative; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 42px; align-items: center; padding: 30px 0 50px; text-decoration: none; }
+  .chapter:last-child { padding-bottom: 0; }
+  .chapter-number { position: relative; z-index: 1; display: grid; place-items: center; width: 150px; height: 150px; border: 1px solid rgba(232, 189, 115, .5); border-radius: 50%; color: var(--gold); background: var(--night); font-size: 51px; letter-spacing: -.08em; transition: border-color .3s ease, color .3s ease, transform .3s ease; }
+  .chapter:hover .chapter-number { border-color: var(--rose); color: var(--rose); transform: scale(1.05); }
+  .chapter-info { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 25px; align-items: center; padding: 29px 0; border-top: 1px solid var(--line); }
+  .chapter:first-child .chapter-info { border-top: 0; }
+  .chapter-meta { margin-bottom: 13px; color: var(--gold); font-size: 10px; letter-spacing: .19em; text-transform: uppercase; font-weight: 800; }
+  .chapter h3 { margin: 0 0 12px; font-size: clamp(29px, 4vw, 51px); line-height: .95; letter-spacing: -.05em; }
+  .chapter p { max-width: 510px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+  .chapter-arrow { display: grid; place-items: center; width: 52px; height: 52px; border: 1px solid var(--line); border-radius: 50%; color: var(--gold); font-size: 24px; transition: background .3s ease, border-color .3s ease, transform .3s ease; }
+  .chapter:hover .chapter-arrow { border-color: var(--gold); background: rgba(232, 189, 115, .12); transform: translateX(5px); }
+  .chapter--current .chapter-number { color: var(--rose); border-color: var(--rose); }
+  .chapter--current .chapter-info { background: linear-gradient(90deg, rgba(232, 120, 121, .08), transparent 75%); }
+  .chapter-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .tag { padding: 6px 9px; border: 1px solid var(--line); color: var(--dim); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+  .future { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 42px; align-items: center; padding-top: 56px; }
+  .future-dot { display: grid; place-items: center; width: 150px; height: 150px; border: 1px dashed rgba(248, 241, 231, .3); border-radius: 50%; color: var(--dim); font-family: var(--serif); font-size: 43px; }
+  .future-copy { padding: 28px 0; border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); }
+  .future-copy h3 { margin: 0 0 10px; color: var(--muted); font-size: 34px; }
+  .future-copy p { margin: 0; color: var(--dim); font-size: 13px; line-height: 1.7; }
+  .closing { position: relative; display: grid; place-items: center; min-height: 460px; padding: 90px 20px; text-align: center; border-top: 1px solid var(--line); overflow: hidden; }
+  .closing::before, .closing::after { content: ""; position: absolute; border: 1px solid rgba(232, 189, 115, .2); border-radius: 50%; }
+  .closing::before { width: 420px; height: 420px; }
+  .closing::after { width: 640px; height: 640px; }
+  .closing-inner { position: relative; z-index: 1; }
+  .closing-mark { margin-bottom: 22px; color: var(--rose); font-family: var(--serif); font-size: 43px; }
+  .closing h2 { max-width: 700px; margin: 0; font-size: clamp(40px, 6vw, 76px); line-height: .95; letter-spacing: -.06em; }
+  .closing p { margin: 26px 0 0; color: var(--muted); font-size: 14px; letter-spacing: .04em; }
+  .footer { display: flex; justify-content: space-between; gap: 20px; padding: 27px 0 35px; border-top: 1px solid var(--line); color: var(--dim); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+  .footer strong { color: var(--rose); font-family: var(--serif); font-size: 19px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 800px) {
+    .page { width: min(100% - 30px, 560px); }
+    .site-nav { padding: 20px 0; font-size: 9px; }
+    .nav-note { display: none; }
+    .hero { display: block; min-height: auto; padding: 78px 0 110px; }
+    h1 { font-size: clamp(58px, 16vw, 92px); }
+    .hero-art { width: calc(100% - 22px); margin: 70px 0 0 10px; }
+    .hero-art::before { right: 0; }
+    .hero-art::after { right: 0; }
+    .scroll-cue { display: none; }
+    .manifesto { display: block; padding: 68px 0 75px; }
+    .manifesto h2 { margin-top: 25px; }
+    .archive { padding: 85px 0 90px; }
+    .section-heading { display: block; margin-bottom: 36px; }
+    .section-heading p { margin-top: 20px; }
+    .archive-map::before { left: 35px; }
+    .chapter { grid-template-columns: 70px minmax(0, 1fr); gap: 22px; padding: 22px 0 37px; }
+    .chapter-number, .future-dot { width: 70px; height: 70px; font-size: 27px; }
+    .chapter-info { display: block; padding: 17px 0 0; }
+    .chapter-arrow { margin-top: 22px; width: 44px; height: 44px; }
+    .future { grid-template-columns: 70px minmax(0, 1fr); gap: 22px; padding-top: 35px; }
+    .future-copy h3 { font-size: 25px; }
+    .closing { min-height: 370px; }
+    .closing::before { width: 300px; height: 300px; }
+    .closing::after { width: 460px; height: 460px; }
+    .footer { display: block; line-height: 2; }
+    .footer strong { display: block; margin-bottom: 6px; }
   }
-  @keyframes fall {
-    0% { transform: translateX(var(--x)) translateY(-10vh) rotate(0deg); opacity:.25; }
-    50% { opacity:.35; }
-    100% { transform: translateX(calc(var(--x) + var(--sw))) translateY(110vh) rotate(360deg); opacity:0; }
-  }
-  .wrap { max-width: 940px; margin: clamp(16px,3vw,40px) auto; padding: clamp(14px,3vw,28px); }
-  .card {
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 28px;
-    padding: clamp(16px, 3.5vw, 40px);
-    box-shadow: 0 20px 60px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.03);
-    backdrop-filter: blur(3px);
-  }
-  .hero{
-    position:relative; border-radius:22px; overflow:hidden; aspect-ratio: 16/9; margin-bottom: 18px;
-    transform: translateZ(0);
-    transition: transform .4s ease;
-    will-change: transform;
-  }
-  .hero img{ width:100%; height:100%; object-fit:cover; display:block; filter: saturate(1.05) contrast(1.03); }
-  .hero::after{
-    content:""; position:absolute; inset:0;
-    background: radial-gradient(900px 300px at 70% 0%, rgba(255,255,255,.10), transparent),
-                linear-gradient(180deg, transparent 65%, rgba(0,0,0,.45));
-  }
-  h1 {
-    margin: 6px 0 2px; line-height:1.08;
-    font-size: clamp(28px, 5.5vw, 56px);
-    font-weight: 900; letter-spacing:.3px;
-    background: linear-gradient(90deg, #fff, #fde68a, #fff);
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-  }
-  .type { border-right: 2px solid var(--gold); white-space: nowrap; overflow: hidden; }
-  .typewriter { width:0; animation: typing 3.8s steps(38,end) forwards, caret 1s step-end infinite; }
-  @keyframes typing { from { width:0 } to { width:100% } }
-  @keyframes caret { 50% { border-color: transparent } }
-  .subtitle { color:var(--muted); margin-bottom:18px; font-size: clamp(14px, 2.2vw, 18px); }
-  .msg p { margin:0 0 18px; font-size: clamp(16px, 2.4vw, 19px); line-height:1.8; }
-  .w { opacity:0; transform: translateY(8px) scale(.98); display:inline-block; animation: riseIn .6s cubic-bezier(.21,1,.21,1) forwards; }
-  @keyframes riseIn { to { opacity:1; transform: translateY(0) scale(1); } }
-  .toolbar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between; margin-top:18px; color:#9fb0c6; }
-  .btn { background: var(--gold); color:#1a1f2e; border:none; border-radius:12px; padding:10px 14px; font-weight:800; cursor:pointer; }
-  .btn.secondary { background:#223054; color:#dbe7ff; border:1px solid #2f3e63; }
-  .note { font-size:13px; }
-  .heartburst { position:fixed; inset:0; pointer-events:none; z-index:10; }
-  .heart { position:absolute; width:12px; height:12px; background: var(--rose); transform: rotate(45deg); animation: pop 1.2s ease-out forwards; }
-  .heart::before, .heart::after { content:""; position:absolute; width:12px; height:12px; background:inherit; border-radius:50%; }
-  .heart::before { left:-6px; top:0; }
-  .heart::after { top:-6px; left:0; }
-  @keyframes pop {
-    0% { transform: translate(-50%, -50%) scale(.6) rotate(45deg); opacity:1; }
-    80% { opacity:1; }
-    100% { transform: translate(var(--dx), var(--dy)) scale(0) rotate(45deg); opacity:0; }
-  }
-  @media (max-width: 380px){
-    .toolbar { gap:8px; }
-    .btn{ padding:9px 12px; font-weight:700; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal, .memory-photo, .chapter-number, .chapter-arrow, .open-link::after { transition: none; }
   }
 </style>
 </head>
 <body>
-  <div class="sky" aria-hidden="true"></div>
+  <div class="page">
+    <nav class="site-nav" aria-label="Birthday archive navigation">
+      <a class="brand" href="index.html">The Ayanfe archive</a>
+      <span class="nav-note">a private museum of <em>us</em></span>
+      <span>02 chapters / ∞ ahead</span>
+    </nav>
 
-  <div class="wrap">
-    <div class="card">
-      <div class="hero" id="hero">
-        <img alt="Ghibli-style couple illustration" src="A_hand-drawn,_anime-style_illustration_depicts_a_y.png"/>
-      </div>
-
-      <h1 class="type typewriter">Happy Birthday, Ayanfe ❤️</h1>
-      <p class="subtitle">From your person • 2025</p>
-
-      <div class="msg" id="message">
-        <p>
-          <span class="w" style="animation-delay:0.20s">My</span> <span class="w" style="animation-delay:0.26s">love,</span>
-          <span class="w" style="animation-delay:0.32s">I</span> <span class="w" style="animation-delay:0.38s">don’t</span>
-          <span class="w" style="animation-delay:0.44s">have</span> <span class="w" style="animation-delay:0.50s">enough</span>
-          <span class="w" style="animation-delay:0.56s">words</span> <span class="w" style="animation-delay:0.62s">to</span>
-          <span class="w" style="animation-delay:0.68s">explain</span> <span class="w" style="animation-delay:0.74s">how</span>
-          <span class="w" style="animation-delay:0.80s">I</span> <span class="w" style="animation-delay:0.86s">feel</span>
-          <span class="w" style="animation-delay:0.92s">about</span> <span class="w" style="animation-delay:0.98s">you—</span>
-          <span class="w" style="animation-delay:1.04s">but</span> <span class="w" style="animation-delay:1.10s">I’ll</span>
-          <span class="w" style="animation-delay:1.16s">try</span> <span class="w" style="animation-delay:1.22s">my</span>
-          <span class="w" style="animation-delay:1.28s">best.</span>
-        </p>
-        <p>
-          It’s amazing how Allah writes our stories. When this year began, I never imagined it would turn this way—things even got harder for a while. Then He brought you into my life, and you brought back my spark, my joy, and my peace. You do that so effortlessly.
-        </p>
-        <p>
-          It’s one thing to be loved, and another to be truly cared for—and that’s what you do. Even with the distance, you still check on me, ask what I’ve eaten, and call me out when I skip my workout. That steady, gentle effort is what I think about every day. Thank you for being there and for accepting me as yours.
-        </p>
-        <p>
-          As today marks a monumental day in your life, it’s not just your day—it’s ours. I pray we grow by leaps and bounds; that our days are filled with peace, tranquility, love, prosperity, and above all, a deepening love for Allah. You have been an anchor for me, and I am so grateful.
-        </p>
-        <p>
-          I know the distance hasn’t made things easy, but it has grown our friendship and strengthened our bond before anything else. I wish I could celebrate this birthday with you in person, but know that I am with you in spirit and in your heart.
-        </p>
-        <p>
-          Ayanfe—the one my heart yearns for—I love you so much. Happy Birthday, my love.
-        </p>
-      </div>
-
-      <div class="toolbar">
-        <div class="note">Tap the gold button for a little surprise ✨</div>
-        <div>
-          <button class="btn" onclick="burst()">Send hearts</button>
-          <button class="btn" id="musicBtn" onclick="toggleMusic()">Play music</button>
-          <button class="btn secondary" onclick="replay()">Replay</button>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <div class="eyebrow">Birthday archive / private edition</div>
+          <h1 id="page-title"><span class="line">A place to keep</span><span class="line">every version of</span><span class="line"><em>our love.</em></span></h1>
+          <p class="hero-lede">This is not just a website. It is a <strong>memory box with a URL</strong> - a new page for every birthday, so we never lose the people we were on the way to becoming us.</p>
+          <a class="open-link" href="#chapters">Open the collection</a>
         </div>
-      </div>
+        <div class="hero-art reveal">
+          <span class="tape" aria-hidden="true"></span>
+          <figure class="memory-photo">
+            <img src="ayanfe-2026.jpg" alt="Ayanfe and her person in their 2026 birthday portrait">
+            <figcaption>The newest portrait in the box.</figcaption>
+            <span class="photo-meta">birthday / 2026</span>
+          </figure>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">scroll to open</div>
+      </section>
 
-      <audio id="bgm" src="Ayanfe.mp3" preload="auto" loop playsinline></audio>
+      <section class="manifesto reveal" aria-labelledby="manifesto-title">
+        <div class="manifesto-label">The reason this exists</div>
+        <div>
+          <h2 id="manifesto-title">Some things deserve more than a post. They deserve a <em>place.</em></h2>
+          <p>Years from now, this should still feel like us: a little tender, a little dramatic, and full of proof that you were loved loudly in every season.</p>
+        </div>
+      </section>
 
-    </div>
+      <section class="archive" id="chapters" aria-labelledby="chapters-title">
+        <div class="section-heading reveal">
+          <div>
+            <div class="eyebrow">The collection</div>
+            <h2 id="chapters-title">Birthday chapters</h2>
+          </div>
+          <p>Every year gets a room. Every room keeps a feeling. Open one when you want to remember.</p>
+        </div>
+
+        <div class="archive-map">
+          <a class="chapter reveal" href="2025.html">
+            <div class="chapter-number">25</div>
+            <div class="chapter-info">
+              <div>
+                <div class="chapter-meta">Chapter one / the beginning</div>
+                <h3>When you were my girlfriend, and my heart already knew.</h3>
+                <p>The first page: written from a distance, full of prayer, gratitude, and the quiet certainty that this was becoming something real.</p>
+                <div class="chapter-tags"><span class="tag">first wish</span><span class="tag">distance</span><span class="tag">the spark</span></div>
+              </div>
+              <span class="chapter-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+
+          <a class="chapter chapter--current reveal" href="2026.html">
+            <div class="chapter-number">26</div>
+            <div class="chapter-info">
+              <div>
+                <div class="chapter-meta">Chapter two / this year</div>
+                <h3>Now I get to call you my wife.</h3>
+                <p>The year the story changed its title but not its heartbeat: a real photograph, a new song, and a letter from the life we are building.</p>
+                <div class="chapter-tags"><span class="tag">newlywed</span><span class="tag">home</span><span class="tag">still choosing you</span></div>
+              </div>
+              <span class="chapter-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+
+          <div class="future reveal">
+            <div class="future-dot">...</div>
+            <div class="future-copy">
+              <h3>The next room is waiting.</h3>
+              <p>One day this line will hold another year, another photograph, another version of the two of you. That is the whole point.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing reveal" aria-label="A note for Ayanfe">
+        <div class="closing-inner">
+          <div class="closing-mark">A + I</div>
+          <h2>For the woman I would choose in every timeline.</h2>
+          <p>Happy birthday, Ayanfe. Come back here whenever you want to feel loved.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>Ayanfe, always.</strong>
+      <span>built one birthday at a time / kept forever</span>
+    </footer>
   </div>
+  <script>
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealItems = document.querySelectorAll('.reveal');
 
-  <div class="heartburst" id="burst"></div>
-
-<script>
-  // generate petals
-  (function(){
-    const sky = document.querySelector('.sky');
-    for (let i=0; i<22; i++){
-      const p = document.createElement('div');
-      p.className = 'petal';
-      p.style.setProperty('--dur', (6 + (i % 5)) + 's');
-      p.style.setProperty('--x', (-45 + i * 6) + 'vw');
-      p.style.setProperty('--sw', (-10 + (i % 6) * 4) + 'vw');
-      sky.appendChild(p);
-    }
-  })();
-
-  // Parallax tilt on the hero image
-  (function() {
-    const hero = document.getElementById('hero');
-    let rect;
-    function setTilt(e) {
-      rect = rect || hero.getBoundingClientRect();
-      const x = (e.clientX - rect.left)/rect.width - .5;
-      const y = (e.clientY - rect.top)/rect.height - .5;
-      hero.style.transform = `perspective(900px) rotateY(${x*4}deg) rotateX(${-y*4}deg) translateZ(6px)`;
-    }
-    function reset() { hero.style.transform = 'translateZ(0)'; rect = null; }
-    hero.addEventListener('mousemove', setTilt);
-    hero.addEventListener('mouseleave', reset);
-    hero.addEventListener('touchmove', (e)=>{ if(!e.touches[0]) return; setTilt(e.touches[0]); }, {passive:true});
-    hero.addEventListener('touchend', reset);
-  })();
-
-  // Hearts burst (confetti-like, but heart shapes)
-  function burst() {
-    const wrap = document.getElementById('burst');
-    const centerX = window.innerWidth/2;
-    const centerY = window.innerHeight/3;
-    for (let i=0;i<36;i++) {
-      const h = document.createElement('div');
-      h.className = 'heart';
-      h.style.left = centerX + 'px';
-      h.style.top = centerY + 'px';
-      const angle = (Math.PI*2) * (i/36);
-      const dist = 120 + Math.random()*160;
-      const dx = Math.cos(angle)*dist;
-      const dy = Math.sin(angle)*dist;
-      h.style.setProperty('--dx', dx + 'px');
-      h.style.setProperty('--dy', dy + 'px');
-      h.style.background = i%2===0 ? 'var(--rose)' : 'var(--teal)';
-      wrap.appendChild(h);
-      setTimeout(()=>wrap.removeChild(h), 1200);
-    }
-  }
-
-  // Music controls with mobile gesture enable
-  const bgm = document.getElementById('bgm');
-  const musicBtn = document.getElementById('musicBtn');
-
-  function enableOnFirstGesture() {
-    const tryPlay = () => {
-      bgm.play().then(() => {
-        musicBtn.textContent = 'Pause music';
-      }).catch(() => { /* user can press the button manually */ });
-      window.removeEventListener('pointerdown', tryPlay);
-      window.removeEventListener('touchstart', tryPlay);
-      window.removeEventListener('click', tryPlay);
-    };
-    window.addEventListener('pointerdown', tryPlay, { once: true });
-    window.addEventListener('touchstart', tryPlay, { once: true });
-    window.addEventListener('click', tryPlay, { once: true });
-  }
-  enableOnFirstGesture();
-
-  function toggleMusic() {
-    if (bgm.paused) {
-      bgm.play().then(() => { musicBtn.textContent = 'Pause music'; });
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
     } else {
-      bgm.pause();
-      musicBtn.textContent = 'Play music';
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: .16 });
+      revealItems.forEach((item) => revealObserver.observe(item));
     }
-  }
 
-  // Replay animations
-  function replay() {
-    // re-run typewriter
-    const t = document.querySelector('.typewriter');
-    if (t){
-      t.style.animation='none'; t.offsetHeight; t.style.animation='typing 3.8s steps(38,end) forwards, caret 1s step-end infinite';
+    const photo = document.querySelector('.memory-photo');
+    if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+      photo.addEventListener('pointermove', (event) => {
+        const box = photo.getBoundingClientRect();
+        const x = (event.clientX - box.left) / box.width - .5;
+        const y = (event.clientY - box.top) / box.height - .5;
+        photo.style.transform = `rotate(${3 + x * 2}deg) translate(${x * 4}px, ${y * 4}px)`;
+      });
+      photo.addEventListener('pointerleave', () => { photo.style.transform = ''; });
     }
-    // re-run word reveals
-    document.querySelectorAll('.w').forEach((el)=>{
-      el.style.animation='none'; el.offsetHeight; el.style.animation='riseIn .6s cubic-bezier(.21,1,.21,1) forwards';
-    });
-    // small petal pulse
-    burst();
-  }
-
-  // Typewriter class and staggered words for paragraphs without spans
-  window.addEventListener('load', () => {
-    // Typewriter effect for h1
-    const h1 = document.querySelector('h1');
-    h1.classList.add('typewriter');
-    // Wrap remaining paragraphs
-    let base = 0.2;
-    document.querySelectorAll('.msg p').forEach((p, idx) => {
-      if (idx === 0) { base += 0.6; return; } // first paragraph already has spans
-      const words = p.textContent.trim().split(/\\s+/);
-      p.innerHTML = words.map((w, i)=> `<span class="w" style="animation-delay:${(base + i*0.05).toFixed(2)}s">${w}</span>`).join(' ');
-      base += 0.6;
-    });
-    setTimeout(burst, 900);
-  });
-</script>
+  </script>
 </body>
 </html>
